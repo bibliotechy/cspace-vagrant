@@ -11,7 +11,7 @@ If you are comfortable with git:
 
 `git clone https://github.com/bibliotechy/cspace-vagrant`
 
-If you don't want to run git, you can just download the [zipped version](https://github.com/bibliotechy/cspace-vagrant/archive/0.1.zip) and unzip to your favorite location. 
+If you don't want to run git, you can just download the [zipped version](https://github.com/bibliotechy/cspace-vagrant/archive/0.2.zip) and unzip to your favorite location. 
 
 After cloning or unzipping the file, navigate into the `cspace-vagrant` directory. then run:
 
