@@ -24,13 +24,12 @@ VAGRANTFILE_API_VERSION = "2"
   end
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define "cspace" do |app|
-    app.vm.box = "trusty64"
+    app.vm.box = "ubuntu/trusty64"
     app.vm.hostname = "vagrant.cspace-puppet.org"
-    app.vm.box_url = "https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box"
     app.vm.network :private_network, ip: "10.10.10.101"
     app.vm.network "forwarded_port", guest: 8180, host: 8180
     app.vm.provider "virtualbox" do |v|
-      v.customize ["modifyvm", :id, "--memory", 2048]
+      v.customize ["modifyvm", :id, "--memory", 3072]
         case os
         when /linux/
           v.customize ["modifyvm", :id, "--cpus", `grep "^processor" /proc/cpuinfo | wc -l`.chomp]
